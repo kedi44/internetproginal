@@ -1,0 +1,74 @@
+1- Register;
+
+	POST /api/Register HTTP/1.1
+	Host: localhost:44367
+	Content-Type: application/json
+	Content-Length: 256
+	
+	{
+			"customername": "recep",
+			"customerphonenumber": "53469858982",
+			"customeradress": "istanbul",
+			"customergame": "oyun",
+			"gamename": "pubg",
+			"customerpassword": "şifree"
+	}
+
+
+2- Müşteri Listeleme;
+
+	GET /api/getcustomers HTTP/1.1
+	Host: localhost:44367
+
+
+3- Ürün Ekleme;
+
+	POST /api/AddProduct HTTP/1.1
+	Host: localhost:44367
+	Content-Type: application/json
+	Content-Length: 126
+	
+	{
+			"gameId": "oy-4",
+			"gamename": "knight",
+			"gameprice": 25.5,
+			"licensenumber": "123"
+	}
+
+
+4- Ürün Silme;
+
+	POST /api/DeleteProduct HTTP/1.1
+	Host: localhost:44367
+	Content-Type: application/json
+	Content-Length: 33
+	
+	{   
+			"gameId": "oy-4"
+	}
+
+
+5- Ürün Listeleme;
+
+	GET /api/GetProducts HTTP/1.1
+	Host: localhost:44367
+
+
+6- Admin Listeleme;
+
+	GET /api/GetAdmins HTTP/1.1
+	Host: localhost:44367
+
+
+7- Admin kullanıcı doğrulama;
+
+
+	POST /api/CheckUsernamePassword HTTP/1.1
+	Host: localhost:44367
+	Content-Type: application/json
+	Content-Length: 73
+	
+	{
+		"adminid": "ad-1",
+		"adminpassword": "1234"
+	}
